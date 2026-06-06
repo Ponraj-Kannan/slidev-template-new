@@ -1,0 +1,765 @@
+/* ── Design tokens ───────────────────────────────────────── */
+:root {
+    --red: #ef5050;
+    --red-dark: #c73c3c;
+    --red-light: #fff0f0;
+    --red-soft: #fde8e8;
+    --navy: #1a1f36;
+    --navy-mid: #2d3561;
+    --slate: #4a5568;
+    --muted: #718096;
+    --bg: #f7f8fc;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --green: #38a169;
+    --orange: #dd6b20;
+    --blue: #3182ce;
+    --yellow: #d69e2e;
+    --purple: #805ad5;
+    --shadow-sm: 0 1px 4px rgba(0, 0, 0, .08);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, .12);
+    --radius: 10px;
+    --radius-lg: 16px;
+}
+
+/* ── Base layout ─────────────────────────────────────────── */
+.slidev-layout {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+}
+
+/* ── Top navbar ──────────────────────────────────────────── */
+.slide-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 12px 0;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--red);
+}
+
+.slide-navbar .nav-title {
+    background: var(--red);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 5px 18px;
+    border-radius: 6px;
+    letter-spacing: 0.4px;
+}
+
+.slide-navbar .nav-badge {
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ── Cards ───────────────────────────────────────────────── */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+}
+
+.card-red {
+    background: var(--red-soft);
+    border: 1px solid var(--red);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+}
+
+.card-navy {
+    background: #f0f4ff;
+    color: var(--navy);
+    border: 1px solid #c5cde8;
+    border-radius: var(--radius);
+    padding: 14px 18px;
+}
+
+.card-green {
+    background: #f0fff4;
+    border: 1px solid var(--green);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+}
+
+.card-blue {
+    background: #ebf8ff;
+    border: 1px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+}
+
+.card-orange {
+    background: #fffaf0;
+    border: 1px solid var(--orange);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+}
+
+.card-purple {
+    background: #faf5ff;
+    border: 1px solid var(--purple);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+}
+
+/* ── Pills ───────────────────────────────────────────────── */
+.pill {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.pill-red {
+    background: var(--red-soft);
+    color: var(--red-dark);
+}
+
+.pill-navy {
+    background: #eef0f8;
+    color: var(--navy-mid);
+}
+
+.pill-green {
+    background: #f0fff4;
+    color: var(--green);
+}
+
+.pill-orange {
+    background: #fffaf0;
+    color: var(--orange);
+}
+
+.pill-blue {
+    background: #ebf8ff;
+    color: var(--blue);
+}
+
+.pill-purple {
+    background: #faf5ff;
+    color: var(--purple);
+}
+
+/* ── Section label ───────────────────────────────────────── */
+.section-label {
+    font-size: 0.62rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--red);
+    margin-bottom: 4px;
+}
+
+/* ── Typography ──────────────────────────────────────────── */
+.slide-h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.slide-h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+}
+
+.slide-h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--navy-mid);
+}
+
+.body-text {
+    font-size: 0.78rem;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+.small-text {
+    font-size: 0.68rem;
+    color: var(--muted);
+}
+
+.highlight {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.mono {
+    font-family: 'Fira Code', monospace;
+}
+
+/* ── Grid helpers ────────────────────────────────────────── */
+.g2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.g3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.g4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.flex-row {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ── Icon circle ─────────────────────────────────────────── */
+/* Last definition: font-size 1.3rem, no font-weight, no color on base */
+.icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+/* Last definitions: background only (color removed from base variants) */
+.ic-red {
+    background: var(--red-soft);
+}
+
+.ic-navy {
+    background: #eef0f8;
+}
+
+.ic-green {
+    background: #f0fff4;
+}
+
+.ic-orange {
+    background: #fffaf0;
+}
+
+.ic-blue {
+    background: #ebf8ff;
+}
+
+.ic-purple {
+    background: #faf5ff;
+    color: var(--purple);
+}
+
+/* ── Callouts ────────────────────────────────────────────── */
+.callout {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    font-size: 0.75rem;
+}
+
+.callout-info {
+    background: #ebf8ff;
+    border: 1px solid var(--blue);
+}
+
+.callout-warn {
+    background: #fffaf0;
+    border: 1px solid var(--orange);
+}
+
+.callout-success {
+    background: #f0fff4;
+    border: 1px solid var(--green);
+}
+
+.callout-danger {
+    background: var(--red-soft);
+    border: 1px solid var(--red);
+}
+
+/* ── Progress dots ───────────────────────────────────────── */
+.topic-progress {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.tp-dot {
+    width: 28px;
+    height: 6px;
+    border-radius: 3px;
+    background: var(--border);
+}
+
+.tp-dot.active {
+    background: var(--red);
+}
+
+.tp-dot.done {
+    background: var(--red-dark);
+}
+
+/* ── Output box ──────────────────────────────────────────── */
+.output-box {
+    background: #f6f8fa;
+    color: #2d7a00;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.78rem;
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    border: 1px solid #c8e6c9;
+    line-height: 1.7;
+}
+
+.output-box .prompt {
+    color: #0e6ead;
+}
+
+.output-box .comment {
+    color: #6b7280;
+}
+
+/* ── Code block ──────────────────────────────────────────── */
+.code-block {
+    background: #f6f8fa;
+    border-radius: var(--radius);
+    border: 1px solid #e1e4e8;
+    padding: 14px 16px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+    line-height: 1.9;
+}
+
+/* ── Step flow ───────────────────────────────────────────── */
+.step-flow {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.step-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 8px 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 80px;
+}
+
+.step-box.active {
+    border-color: var(--red);
+    background: var(--red-soft);
+    color: var(--red-dark);
+}
+
+.step-arrow {
+    color: var(--muted);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ── Comparison table ────────────────────────────────────── */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+}
+
+.cmp-table th {
+    background: var(--slate);
+    color: #fff;
+    padding: 7px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.cmp-table td {
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.cmp-table tr:nth-child(even) td {
+    background: #f7f8fc;
+}
+
+.cmp-table .yes {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.cmp-table .no {
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* ── Activity box ────────────────────────────────────────── */
+.activity-box {
+    background: #f0f4ff;
+    color: var(--navy);
+    border: 1px solid #c5cde8;
+    border-radius: var(--radius-lg);
+    padding: 20px 24px;
+}
+
+.activity-box .act-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.activity-box .act-task {
+    background: #ffffff;
+    border-radius: var(--radius);
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+    border: 1px solid #c5cde8;
+}
+
+.activity-box .hint {
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+/* ── Syntax diagram ──────────────────────────────────────── */
+.syntax-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+}
+
+.syn-keyword {
+    background: #fde8e8;
+    color: var(--red-dark);
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.syn-varname {
+    background: #ebf8ff;
+    color: #2b6cb0;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.syn-operator {
+    background: #fffaf0;
+    color: var(--orange);
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.syn-value {
+    background: #f0fff4;
+    color: var(--green);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.syn-label {
+    font-size: 0.6rem;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 3px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* ── Trace table ─────────────────────────────────────────── */
+.trace-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.72rem;
+    font-family: 'Fira Code', monospace;
+}
+
+.trace-table th {
+    background: var(--slate);
+    color: #fff;
+    padding: 6px 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.trace-table td {
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.trace-table tr:nth-child(even) td {
+    background: #f7f8fc;
+}
+
+/* Last definition: background is var(--slate) */
+.trace-table .hl {
+    background: var(--slate);
+    color: var(--red-dark);
+    font-weight: 600;
+}
+
+/* ── Flow nodes ──────────────────────────────────────────── */
+.flow-node {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.flow-start {
+    background: var(--navy-mid);
+    color: #fff;
+    border-radius: 20px;
+}
+
+/* Last definition: includes transform: rotate(0deg) */
+.flow-cond {
+    background: #fffaf0;
+    color: var(--orange);
+    border-color: var(--orange);
+    transform: rotate(0deg);
+}
+
+.flow-body {
+    background: var(--red-soft);
+    color: var(--red-dark);
+    border-color: var(--red);
+}
+
+.flow-end {
+    background: #f0fff4;
+    color: var(--green);
+    border-color: var(--green);
+    border-radius: 20px;
+}
+
+.flow-call {
+    background: #ebf8ff;
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.flow-return {
+    background: #faf5ff;
+    color: var(--purple);
+    border-color: var(--purple);
+}
+
+.flow-arrow {
+    text-align: center;
+    color: var(--muted);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.flow-v-box {
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 120px;
+}
+
+/* ── Stack frames ────────────────────────────────────────── */
+.stack-frame {
+    background: var(--white);
+    border: 2px solid var(--blue);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.7rem;
+    margin-bottom: 4px;
+    text-align: center;
+    color: var(--navy);
+}
+
+.stack-frame.top {
+    border-color: var(--red);
+    background: var(--red-soft);
+    color: var(--red-dark);
+}
+
+.stack-frame.done {
+    border-color: var(--green);
+    background: #f0fff4;
+    color: #276749;
+}
+
+.stack-frame.middle {
+    border-color: var(--orange);
+    background: #fffaf0;
+    color: #c05621;
+}
+
+/* ── Memory box ──────────────────────────────────────────── */
+/* Last definition: structural table-style layout */
+.mem-box {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.72rem;
+}
+
+.mem-box .mem-header {
+    background: var(--slate);
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.mem-box .mem-row {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid var(--border);
+}
+
+.mem-box .mem-row:last-child {
+    border-bottom: none;
+}
+
+.mem-box .mem-addr {
+    background: #f0f4ff;
+    color: var(--navy-mid);
+    padding: 6px 10px;
+    font-size: 0.62rem;
+    min-width: 80px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+
+.mem-box .mem-name {
+    background: var(--red-soft);
+    color: var(--red-dark);
+    padding: 6px 10px;
+    font-weight: 700;
+    min-width: 70px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+
+.mem-box .mem-val {
+    background: #f0fff4;
+    color: var(--green);
+    padding: 6px 12px;
+    font-weight: 700;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.mem-box .mem-type {
+    background: #fffaf0;
+    color: var(--orange);
+    padding: 6px 10px;
+    font-size: 0.62rem;
+    min-width: 60px;
+    border-left: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+
+/* ── Memory variants (simple card style) ─────────────────── */
+.mem-box .mem-label {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.mem-local {
+    border-color: var(--blue);
+    background: #ebf8ff;
+}
+
+.mem-global {
+    border-color: var(--green);
+    background: #f0fff4;
+}
+
+/* ── Recursion tree ──────────────────────────────────────── */
+.rec-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.rec-node {
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.rec-node-call {
+    background: #ebf8ff;
+    border-color: var(--blue);
+    color: #2b6cb0;
+}
+
+.rec-node-base {
+    background: #f0fff4;
+    border-color: var(--green);
+    color: #276749;
+}
+
+.rec-node-return {
+    background: #faf5ff;
+    border-color: var(--purple);
+    color: #553c9a;
+}
+
+.rec-connector {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
